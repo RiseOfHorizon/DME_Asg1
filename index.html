@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=devicewidth,initial-scale=1">
+<link rel="stylesheet" href="css/BudgetApp.css">
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+<link href="css/chartist.min.css" rel="stylesheet" type="text/css"/>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/chartist.min.js"></script>
+<script src="js/BudgetApp.js"></script>
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/abril-fatface:n4:default.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+										<!--    LOGIN PAGE ------>
+
+ 	<div data-role="page" id="login">
+
+		<div data-role="content">	
+			<div class="background">				
+				<div data-role="content" class="loginpage">
+					<form class="form">
+					  <input id="username" type="text" class="username login" placeholder="Username"/>
+					  <input id="password" type="password" class="password login" placeholder="Password"/>
+						<button type="button" class="signIn" value="Login">Sign In</button>
+						<p id="errorLogin"></p>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+										<!--    LOGIN PAGE END------>
+										
+										
+										<!--    HOME PAGE ------>
+ 	<div data-role="page" id="home">
+
+		<div data-role="content">
+			<h2 class="aiTalk"> Welcome Admin!</h2>
+			<h3 class="aiTalk2"> How can I help you today?</h3>
+			
+			<a href = "#createSales"><button type="button" class="homeBtn" value="createSales">Create Sales</button></a>
+			<a href = "#viewSales"><button type="button" class="" value="viewSales">View Sales</button></a>
+			<a href = "#searchSalesIncomeExpenses"><button type="button" class="" value="searchSalesIncomeExpenses">Search Sales</button></a>
+			<a href = "#login"><button type="button" class="" value="Logout">Logout</button></a>
+
+		
+						</div>
+									
+											<!-- NAV BAR -->
+			<div data-role="footer" data-id="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#createSales" data-role="button" data-icon="plus">Create</a></li>
+							<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+							<li><a href="#viewSales" data-role="button" data-icon="eye">View</a></li>
+							<li><a href="#searchSalesIncomeExpenses" data-role="button" data-icon="search">Search</a></li>	
+						</ul>
+					</div>
+				</div>
+
+	</div>
+
+										<!--    HOME PAGE END------>
+										
+										<!--    CREATE SALES PAGE ------>
+
+    <div data-role="page" id="createSales">
+		<div data-role="content">
+			<h2 class="aiTalk">Are you creating an income entry?</h2>
+			<h2 class="aiTalk2">Or an expense entry?</h2><br>
+			
+			<a href = "#incomeCreation"><button type="button" class="" value="incomeEntry">Income Entry</button></a><br>
+			<a href = "#expenseCreation"><button type="button" class="" value="expenseEntry">Expense Entry</button></a>
+		</div>
+											<!-- NAV BAR -->
+			<div data-role="footer" data-id="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#createSales" data-role="button" data-icon="plus">Create</a></li>
+							<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+							<li><a href="#viewSales" data-role="button" data-icon="eye">View</a></li>
+							<li><a href="#searchSalesIncomeExpenses" data-role="button" data-icon="search">Search</a></li>	
+						</ul>
+					</div>
+				</div>
+	</div>
+
+										<!--    CREATE SALES PAGE END------>
+
+										<!--    INCOME CREATION PAGE ------>
+
+    <div data-role="page" id="incomeCreation">
+    
+		<div data-role="header" id="head">
+			<h1> Income Creation </h1>
+		</div>
+			<div class="backgroundCreation">				
+		<div data-role="content">
+				<form id="incomeCreateForm">				
+					<input type="date" id="iDateCreate" class="incomeCreate" placeholder="Date"/>
+					<input type="text" id="iNameCreate" class="incomeCreate" placeholder="Income Name"/>
+					
+					<select id="iCategoryCreate">
+						<option value="--" selected>Category</option>
+						<option value="Fixed Asset">Fixed Asset</option>
+						<option value="Current Asset">Current Asset</option>
+			  		</select>
+					<input type="number" id="iAmountCreate" class="incomeCreate" placeholder="Amount"/>
+					<select id="iTypeOfPaymentCreate">
+						<option value="--" selected>Cash?Credit?</option>
+						<option value="Cash">Cash</option>
+						<option value="Credit">Credit</option>
+			  		</select>
+					<input type="text" id="iCommentCreate" class="incomeCreate" placeholder="Comments"/>
+					<select id="iTransactionStatusCreate">
+						<option value="--" selected>Transaction Status</option>
+						<option value="Completed">Completed</option>
+						<option value="Incomplete">Incomplete</option>
+			  		</select><br>
+			  		<a href = "#finishCreatingIncome"><button type="button" class="createIncomeEntry" value="createIncomeEntry">Create Income Entry</button></a>
+					
+				</form>
+											<!-- NAV BAR -->
+			<div data-role="footer" data-id="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#createSales" data-role="button" data-icon="plus">Create</a></li>
+							<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+							<li><a href="#viewSales" data-role="button" data-icon="eye">View</a></li>
+							<li><a href="#searchSalesIncomeExpenses" data-role="button" data-icon="search">Search</a></li>	
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+										<!--      INCOME CREATION END------>
+			
+										<!--    INCOME CREATION PAGE FINISHING SCREEN ------>
+
+    <div data-role="page" id="finishCreatingIncome">
+		<div data-role="header" id="head">
+			<h1> Income Creation </h1>
+		</div>
+
+		<div data-role="content">
+			<p id="iDate"></p>
+			<p id="iName"></p>
+			<p id="iCategory"></p>
+			<p id="iAmount"></p>
+			<p id="iTypeOfPayment"></p>
+			<p id="iComment"></p>
+			<p id="iTransactionStatus"></p>
+			<a href = "#home"><button type="button" class="confirmIncomeEntry" value="createIncomeEntry">Confirm Income Entry</button></a>
+			<a href = "#incomeCreation"><button type="button" class="createIncomeEntry" value="createIncomeEntry">I want to edit something</button></a>										
+											<!-- NAV BAR -->
+			<div data-role="footer" data-id="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#createSales" data-role="button" data-icon="plus">Create</a></li>
+							<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+							<li><a href="#viewSales" data-role="button" data-icon="eye">View</a></li>
+							<li><a href="#searchSalesIncomeExpenses" data-role="button" data-icon="search">Search</a></li>	
+						</ul>
+					</div>
+				</div>
+		</div>
+	</div>
+
+										<!--      INCOME CREATION FINISHING SCREEN END------>									
+									
+										<!--    EXPENSE CREATION PAGE ------>
+
+    <div data-role="page" id="expenseCreation">
+		<div data-role="header" id="head">
+			<h1> Expense Creation </h1>
+		</div>
+			<div class="backgroundCreation">				
+		<div data-role="content">
+			
+				<form id="expenseCreateForm">				
+					<input type="date" id="eDateCreate" class="expenseCreate" placeholder="Date"/>
+					<input type="text" id="eNameCreate" class="expenseCreate" placeholder="Expense Name"/>
+					
+					<select id="eCategoryCreate">
+						<option value="--" selected>Category</option>
+						<option value="Fixed Asset">Fixed Asset</option>
+						<option value="Current Asset">Current Asset</option>
+			  		</select>
+	
+					<input type="number" id="eAmountCreate" class="expenseCreate" placeholder="Amount">
+	
+					<select id="eTypeOfPaymentCreate">
+						<option value="--" selected>Cash?Credit?</option>
+						<option value="Cash">Cash</option>
+						<option value="Credit">Credit</option>
+			  		</select>
+	
+					<input type="text" id="eCommentCreate" class="expenseCreate" placeholder="Comments"/>
+
+					<select id="eTransactionStatusCreate">
+						<option value="--" selected>Transaction Status</option>
+						<option value="Completed">Completed</option>
+						<option value="Incomplete">Incomplete</option>
+			  		</select><br>
+					
+			  		<a href = "#finishCreatingExpense"><button type="button" class="createExpenseEntry" value="createExpenseEntry">Create Expense Entry</button></a>
+			
+				</form>
+											<!-- NAV BAR -->
+			<div data-role="footer" data-id="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#createSales" data-role="button" data-icon="plus">Create</a></li>
+							<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+							<li><a href="#viewSales" data-role="button" data-icon="eye">View</a></li>
+							<li><a href="#searchSalesIncomeExpenses" data-role="button" data-icon="search">Search</a></li>	
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+										<!--      EXPENSE CREATION END------>
+
+										<!--    EXPENSE CREATION PAGE FINISHING SCREEN ------>
+
+    <div data-role="page" id="finishCreatingExpense">
+		<div data-role="header" id="head">
+			<h1> Expense Creation </h1>
+		</div>
+
+		<div data-role="content">
+			<p id="eDate"></p>
+			<p id="eName"></p>
+			<p id="eCategory"></p>
+			<p id="eAmount"></p>
+			<p id="eTypeOfPayment"></p>
+			<p id="eComment"></p>
+			<p id="eTransactionStatus"></p>
+			<a href = "#home"><button type="button" class="confirmExpenseEntry" value="createExpenseEntry">Confirm Expense Entry</button></a>
+			<a href = "#ExpenseCreation"><button type="button" class="createExpenseEntry" value="createExpenseEntry">I want to edit something</button></a>																					
+											<!-- NAV BAR -->
+			<div data-role="footer" data-id="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#createSales" data-role="button" data-icon="plus">Create</a></li>
+							<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+							<li><a href="#viewSales" data-role="button" data-icon="eye">View</a></li>
+							<li><a href="#searchSalesIncomeExpenses" data-role="button" data-icon="search">Search</a></li>	
+						</ul>
+					</div>
+				</div>
+		</div>
+	</div>
+
+										<!--    EXPENSE CREATION FINISHING SCREEN END------>		
+									
+										<!--    VIEW SALES PAGE ------>
+
+    <div data-role="page" id="viewSales">
+		<div data-role="content">
+			<h2>Do you want to view an income entry?</h2><br>
+			<h2>Or an expense entry?</h2>
+			
+			<a href = "#viewIncome"><button class="viewIncomeEntry" type="button" value="viewIncomeEntry">Income Entry</button></a>
+			<a href = "#viewExpense"><button class="viewExpenseEntry" type="button" value="viewExpenseEntry">Expense Entry</button></a>
+		</div>
+
+											<!-- NAV BAR -->
+			<div data-role="footer" data-id="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#createSales" data-role="button" data-icon="plus">Create</a></li>
+							<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+							<li><a href="#viewSales" data-role="button" data-icon="eye">View</a></li>
+							<li><a href="#searchSalesIncomeExpenses" data-role="button" data-icon="search">Search</a></li>	
+						</ul>
+					</div>
+				</div>
+		</div>
+										<!--      VIEW SALES END------>
+	
+										<!--    VIEW INCOME 1 PAGE ------>
+
+    <div data-role="page" id="viewIncome">
+		<div data-role="header" id="head">
+			<h1> Viewing Income </h1>
+		</div>
+
+		<div data-role="content">
+
+				<div id="showIncome">				
+			</div>
+			
+			<a href = "#viewSales"><button type="button" class="createIncomeEntry" value="createIncomeEntry">Back</button></a>
+				</div>
+
+
+          	<div class="ct-chart ct-perfect-fourth" style="height:200px;"></div>
+										
+										
+											<!-- NAV BAR -->
+			<div data-role="footer" data-id="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#createSales" data-role="button" data-icon="plus">Create</a></li>
+							<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+							<li><a href="#viewSales" data-role="button" data-icon="eye">View</a></li>
+							<li><a href="#searchSalesIncomeExpenses" data-role="button" data-icon="search">Search</a></li>	
+						</ul>
+					</div>
+				</div>
+		</div>
+										<!--      VIEW INCOME 1 END------>	
+	
+										<!--    VIEW EXPENSE PAGE ------>
+	<div data-role="page" id="viewExpense">
+		<div data-role="header" id="head">
+			<h1> Viewing Expense </h1>
+		</div>
+
+		<div data-role="content">
+
+
+				<div id="showExpense">				
+
+			</div>
+			
+			<a href = "#viewSales"><button type="button" class="createExpenseEntry" value="createExpenseEntry">Back</button></a>
+				</div>
+
+											<!-- NAV BAR -->
+			<div data-role="footer" data-id="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#createSales" data-role="button" data-icon="plus">Create</a></li>
+							<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+							<li><a href="#viewSales" data-role="button" data-icon="eye">View</a></li>
+							<li><a href="#searchSalesIncomeExpenses" data-role="button" data-icon="search">Search</a></li>	
+						</ul>
+					</div>
+				</div>
+		</div>
+										<!--      VIEW EXPENSE END------>		
+	
+										<!--    SEARCH SALES PAGE ------>
+
+    <div data-role="page" id="searchSalesIncomeExpenses">
+		<div data-role="content">
+			<h2>What do you require my help for?</h2><br>
+			<form>
+		  
+				<a href = "#searchIncomeSales"><button type="button" class="searchIncomeSales" value="incomeEntry">Search Income</button></a>
+				<a href = "#searchExpenseSales"><button type="button" class="searchExpenseSales" value="expenseEntry">Search Expense  </button></a>
+
+			</form><br><br>
+				
+		</div>
+											<!-- NAV BAR -->
+			<div data-role="footer" data-id="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#createSales" data-role="button" data-icon="plus">Create</a></li>
+							<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+							<li><a href="#viewSales" data-role="button" data-icon="eye">View</a></li>
+							<li><a href="#searchSalesIncomeExpenses" data-role="button" data-icon="search">Search</a></li>	
+						</ul>
+					</div>
+				</div>
+	</div>
+
+										<!--    SEARCH SALES PAGE END------>	
+
+									
+										<!--    INCOME SEARCH SALES PAGE ------>
+
+    <div data-role="page" id="searchIncomeSales">
+		<div data-role="content">
+			<h2>What do you require my help for?</h2><br>
+			<form>
+		  
+				<u><b><h3>Search By Categories:</h3></b></u>
+			  <select id="iSearchCategory">
+				<option id="-" value="--" selected>--</option>
+				<option id="-" value="Fixed Asset">Fixed Asset</option>
+				<option id="-" value="Current Asset" >Current Asset</option>
+			  </select>
+			  
+				<u><b><h3>Search By Payment Mode:</h3></b></u>
+			  <select id="iSearchPaymentMode">
+				<option id="-"value="--" selected>--</option>
+				<option id="-"value="Cash">Cash</option>
+				<option id="-"value="Credit" >Credit</option>
+			  </select>
+			  <br>
+				<button type="button" class="iSearchOption" value="incomeEntry">Search</button>
+				<div id="iSearchValidation"></div>
+			  <br>
+				<a href = "#searchSalesIncomeExpenses"><button type="button" class="" value="incomeEntry">Back</button></a>
+
+			</form><br><br>
+				
+		</div>
+											<!-- NAV BAR -->
+			<div data-role="footer" data-id="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#createSales" data-role="button" data-icon="plus">Create</a></li>
+							<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+							<li><a href="#viewSales" data-role="button" data-icon="eye">View</a></li>
+							<li><a href="#searchSalesIncomeExpenses" data-role="button" data-icon="search">Search</a></li>	
+						</ul>
+					</div>
+				</div>
+	</div>
+
+										<!--    INCOME SEARCH / SORT SALES PAGE END------>	
+	
+										<!--    INCOME SEARCH SALES PAGE ------>
+
+    <div data-role="page" id="iFilter">
+		<div data-role="content">
+			<h2>Is this what you are looking for:<div id="iAI"></div></h2><br>
+				<div id="iFilterCategoriesFA">				
+			</div>
+				<div id="iFilterCategoriesCA">				
+			</div>
+				<div id="iFilterName">				
+			</div>
+				<div id="iFilterPaymentModeCash">				
+			</div>
+				<div id="iFilterPaymentModeCredit">				
+			</div>
+		  		  
+			  <br>
+				<a href = "#searchIncomeSales"><button type="button" class="" value="incomeEntry">Back</button></a>
+
+			<br><br>
+				
+		</div>
+											<!-- NAV BAR -->
+			<div data-role="footer" data-id="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#createSales" data-role="button" data-icon="plus">Create</a></li>
+							<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+							<li><a href="#viewSales" data-role="button" data-icon="eye">View</a></li>
+							<li><a href="#searchSalesIncomeExpenses" data-role="button" data-icon="search">Search</a></li>	
+						</ul>
+					</div>
+				</div>
+	</div>
+
+										<!--    INCOME SEARCH SALES PAGE END------>	
+	
+										<!--    EXPENSE SEARCH / SORT SALES PAGE ------>
+
+    <div data-role="page" id="searchExpenseSales">
+		<div data-role="content">
+			<h2>What do you require my help for?</h2><br>
+			<form>
+		  
+				<u><b><h3>Search By Categories:</h3></b></u>
+			  <select id="eSearchCategory">
+				<option id="-" value="--" selected>--</option>
+				<option id="-" value="Fixed Asset">Fixed Asset</option>
+				<option id="-" value="Current Asset" >Current Asset</option>
+			  </select>
+			  
+				<u><b><h3>Search By Payment Mode:</h3></b></u>
+			  <select id="eSearchPaymentMode">
+				<option id="-"value="--" selected>--</option>
+				<option id="-"value="Cash">Cash</option>
+				<option id="-"value="Credit" >Credit</option>
+			  </select>
+			  
+			  <br>
+				<button type="button" class="eSearchOption" value="incomeEntry">Search</button></a>
+				<div id="eSearchValidation"></div>
+			  <br>
+				<a href = "#searchSalesIncomeExpenses"><button type="button" class="" value="incomeEntry">Back</button></a>
+
+			<br><br>
+				
+		</div>
+											<!-- NAV BAR -->
+			<div data-role="footer" data-id="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#createSales" data-role="button" data-icon="plus">Create</a></li>
+							<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+							<li><a href="#viewSales" data-role="button" data-icon="eye">View</a></li>
+							<li><a href="#searchSalesIncomeExpenses" data-role="button" data-icon="search">Search</a></li>	
+						</ul>
+					</div>
+				</div>
+	</div>
+
+										<!--    EXPENSE SEARCH / SORT SALES PAGE END------>		
+	
+										<!--    EXPENSE SEARCH SALES PAGE ------>
+
+    <div data-role="page" id="eFilter">
+		<div data-role="content">
+			<h2>Is this what you are looking for:<div id="eAI"></div></h2><br>
+				<div id="eFilterCategoriesFA">				
+			</div>
+				<div id="eFilterCategoriesCA">				
+			</div>
+				<div id="eFilterName">				
+			</div>
+				<div id="eFilterPaymentModeCash">				
+			</div>
+				<div id="eFilterPaymentModeCredit">				
+			</div>
+		  
+			  <br>
+				<a href = "#searchExpenseSales"><button type="button" class="" value="expenseEntry">Back</button></a>
+
+			<br><br>
+				
+		</div>
+											<!-- NAV BAR -->
+			<div data-role="footer" data-id="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#createSales" data-role="button" data-icon="plus">Create</a></li>
+							<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+							<li><a href="#viewSales" data-role="button" data-icon="eye">View</a></li>
+							<li><a href="#searchSalesIncomeExpenses" data-role="button" data-icon="search">Search</a></li>	
+						</ul>
+					</div>
+				</div>
+	</div>
+
+										<!--    EXPENSE SEARCH SALES PAGE END------>		
+	
+	
+	
+	</body>
+</html>

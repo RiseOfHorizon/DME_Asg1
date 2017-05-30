@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#head {
+	background-color: #272626;
+	color: white;
+}
+.background {
+	background-color: #BABABA;
+	border-radius: 20px;	
+	width: 80%;
+	height: 33em;
+/*	padding: 20px;*/
+	margin: 10%;
+}
+.aiTalk {
+	font-family: abril-fatface;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 45px;
+	text-align: center;
+}
+.aiTalk2 {
+	font-family: abril-fatface;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 35px;
+	text-align: center;
+}
+.backgroundCreation {
+	background-color: #BABABA;
+	border-radius: 20px;
+	width: 80%;
+	height: 36em;
+	/*	padding: 20px;*/
+	margin: 10%;
+
+}
+.login {
+	margin-left: 25%;
+    font-size: 1.5rem;
+	/*	margin-bottom: -20%;*/
+/*NOT WORKING FOR SOME REASON. PROBABLY JQUERY OVERWRITE IT
+    display: inline-block;
+    width: 22rem;
+    height: 100%;
+    padding-left: 1.5rem;
+    background: transparent;
+    color: #000000;
+*/
+}
+
+.form {
+	padding-top: 50%;
+}
+
+.username {
+	margin-top: 0.5em;
+	outline: none;
+	border-left: none;
+	border-right: none ;
+	border-bottom-style: solid;
+	border-top: none;
+}
+.password { 
+	margin-top: 5em;
+	outline: none;
+	border-left: none #FF0004;
+	border-right: none #FF0004;
+	border-bottom-style: solid;
+	border-top: none;
+}
+.signIn {
+	background: #000000;
+	border-radius: 20px;
+	color: #F1F1F1;	
+	font-size: 1.5rem;
+}
+
+.name {
+      color: #000;
+      font-size: 1.3rem;
+}
+.homeBtn {
+	margin-top: 2em;
+}
+a {
+	text-decoration: none;
+}
+.incomeCreate {
+	width: 22em;
+}
+#iCommentCreate { 
+	width: 22em;
+	height: 10em;
+}
+/*
+.createIncomeEntry{
+	background-color: #000000;
+}
+*/
+.createExpenseEntry{
+	background-color: #000000;
+}
+#eCommentCreate { 
+	width: 22em;
+	height: 10em;
+}
+.incomeEntry {
+	font-size : 2em;
+	text-align: center;
+}
+.expenseEntry {
+	font-size : 2em;
+	text-align: center;
+}
